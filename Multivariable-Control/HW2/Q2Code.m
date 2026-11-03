@@ -1,0 +1,16 @@
+s = tf('s');  
+G11 = 87.8 / (75*s + 1);  
+G12 = -86.4 / (75*s + 1); 
+G21 = 108.2 / (75*s + 1);
+G22 = -109.6 / (75*s + 1); 
+G = [G11 G12; G21 G22];
+C11 = pidtune(G11, 'PID');  
+C22 = pidtune(G22, 'PID');  
+C12 = 0;  
+C21 = 0;  
+C = [C11 C12; C21 C22];
+disp(C);
+T = feedback(C*G, eye(2));  
+figure;
+step(T);
+title('Step Response of 2x2 MIMO System with PID Controllers');

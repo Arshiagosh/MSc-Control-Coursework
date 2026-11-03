@@ -1,0 +1,20 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Multivariable Control, Homework 4}{Poles of Multivariable Systems}{Autumn 1403 (2024)}
+
+\begin{itemize}
+  \item \textbf{The pole-polynomial rule.} I found the poles of
+  \[
+  G(s)=\frac{1}{(s+1)(s+3)^2}\begin{bmatrix}s^2+6s+9 & -1\\ 1 & s^2-9\\ 2(s^2-9) & 1\end{bmatrix}
+  \]
+  by reducing each entry, listing all non-zero minors, and taking the least common denominator. The pole polynomial is $(s+1)(s+3)^2$ (slide 17).
+  \item \textbf{A second transfer matrix} (slide 27): its poles and their multiplicities.
+  \item \textbf{Comparing pole-finding methods} (slide 47), from four representations:
+    \begin{enumerate}
+      \item state space: the eigenvalues of a minimal realisation;
+      \item the Rosenbrock system matrix: watch for cancellations;
+      \item the transfer matrix: the LCM of the denominators of all minors;
+      \item matrix-fraction descriptions: the determinant of the denominator matrix.
+    \end{enumerate}
+\end{itemize}
+\end{document}

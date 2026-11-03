@@ -1,0 +1,20 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Multivariable Control, Homework 1}{A Multivariable Industrial Plant: the Boiler--Turbine Unit}{Autumn 1403 (2024)}
+
+\section*{Task}
+Introduce an industrial multivariable plant and identify its inputs and outputs.
+
+\section*{What I wrote}
+Following Maffezzoni, \emph{Boiler--turbine dynamics in power-plant control} (Control Eng.\ Practice, 1997), I described the boiler--turbine unit of a fossil-fuel power plant as a strongly coupled MIMO system built from three dynamics:
+\begin{itemize}
+  \item \textbf{Evaporator pressure.} Set by the balance between heat input (mainly from fuel flow) and the energy carried away by steam.
+  \item \textbf{Drum level.} Set mainly by the mass balance between feedwater and steam flow, and also disturbed by heat input and pressure swings.
+  \item \textbf{Electrical power.} Proportional to high-pressure turbine steam flow, plus a delayed contribution from the reheater.
+\end{itemize}
+\textbf{Inputs:} fuel flow, air flow, turbine admission (control-valve opening), feedwater flow, recirculated-gas flow, and superheater and reheater spray flows.
+
+\textbf{Outputs:} electrical power, turbine inlet pressure, drum level, turbine inlet temperature, reheater outlet temperature, and air-to-fuel ratio.
+
+Fuel flow changes pressure, which changes drum level, and heat input affects both power and level. Because of this coupling, independent single loops are not enough; the plant needs coordinated multivariable control.
+\end{document}

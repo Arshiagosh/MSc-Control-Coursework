@@ -1,0 +1,12 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Multivariable Control, Homework 6}{Controllability, Observability and Balanced Realisations}{Autumn 1403 (2024)}
+
+\begin{itemize}
+  \item \textbf{Near pole--zero cancellation.} I compared the step responses of $G(s)=1.01/(s+2)$ and $G(s)=(s+1.01)/((s+1)(s+2))$. The near cancellation makes the second-order system behave almost like the first-order one.
+  \item \textbf{Exercises 4-1 and 4-2} (Khaki-Sedigh, \emph{Multivariable Control}). For the given system I checked with MATLAB that it is controllable, observable, functionally controllable ($\det C(sI-A)^{-1}B\neq 0$) and output controllable (rank 3). I also computed the controllability and observability indices from the matrices $\Phi_c$ and $\Phi_o$: both sets are $\{2,1,2\}$, summing to 5.
+  \item \textbf{Exercises 4-3 and 4-4} from the same book.
+  \item \textbf{MATLAB's Lyapunov solver.} I checked which papers the \texttt{lyap}/\texttt{dlyap} solvers are based on: Bartels--Stewart (1972), Barraud (1977), Hammarling (1982), Penzl (1998), and Golub--Nash--Van Loan (1979).
+  \item \textbf{Hankel singular values.} I derived the relations between the gramians and the Hankel singular values used in balanced truncation (slide 15, session 10).
+\end{itemize}
+\end{document}
