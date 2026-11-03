@@ -1,0 +1,18 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Adaptive Control, Homework 5}{Model-reference Adaptive Systems (Åström \& Wittenmark, Examples 5.1, 5.2 and 5.7)}{Autumn 1404 (2025)}
+
+All cases are subsystems of \texttt{HW5.slx}. Each was simulated for three adaptation gains $\gamma$ and compared with the book.
+
+\begin{description}
+  \item[Example 5.1: MIT rule, adapting a feed-forward gain.] $\gamma=0.5$, $1$, $2$. In the re-run, the gain estimate settles in every case; with larger $\gamma$ it moves faster and oscillates more before settling.
+  \item[Example 5.2: MIT rule for a first-order plant with two parameters.] $\gamma=0.2$, $1$, $5$. I plotted the output, the control signal and the estimates $\theta_1$, $\theta_2$.
+  \item[Example 5.7: Lyapunov-based MRAS for the same plant.] $\gamma=0.2$, $1$, $5$. The update law is derived from a Lyapunov function instead of the MIT gradient rule.
+\end{description}
+
+\begin{center}
+\includegraphics[width=0.48\linewidth]{Q5_1_gamma1.png}\hfill
+\includegraphics[width=0.48\linewidth]{Q5_7_gamma1.png}\\[2pt]
+{\small Re-run in R2023b: example 5.1 (left) and example 5.7 (right), both with $\gamma=1$.}
+\end{center}
+\end{document}

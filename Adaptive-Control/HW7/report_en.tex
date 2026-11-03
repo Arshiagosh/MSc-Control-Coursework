@@ -1,0 +1,12 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Adaptive Control, Homework 7}{Gain Scheduling: Compensating a Nonlinear Valve (Åström \& Wittenmark, Example 9.1)}{Autumn 1404 (2025)}
+
+Both cases are subsystems of \texttt{HW7.slx}. A process is driven through a valve with a nonlinear characteristic. Following the book, I compensated the valve with an approximate inverse of its characteristic, built as a piecewise-linear function with four segments, so that the loop sees a roughly linear actuator. I simulated two versions of the loop and plotted the output against the reference.
+
+\begin{center}
+\includegraphics[width=0.45\linewidth]{Q9_1_1.png}\hfill
+\includegraphics[width=0.45\linewidth]{Q9_1_2.png}\\[2pt]
+{\small Re-run in R2023b: the two sub-models of \texttt{HW7.slx}.}
+\end{center}
+\end{document}
