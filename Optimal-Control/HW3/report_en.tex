@@ -1,0 +1,12 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Optimal Control, Homework 3}{Constrained Extrema and Lagrange Multipliers}{Spring 1404 (2025)}
+
+\noindent\textit{The original is handwritten (tablet) in Persian. The problems come from Chapter~4 of Kirk, \emph{Optimal Control Theory}.}
+
+\begin{description}
+  \item[Problem 4-22 (static constrained extremum).] I extremised $f=y_1^2+y_2^2+y_3^2$ subject to $y_1+y_2+y_3=5$ and $y_1^2+y_2^2+y_3=9$. I formed the augmented function with two multipliers and set its differential to zero, then examined the case where $y_1^\star=y_2^\star$ and $p_2^\star=-1$. This gives the candidates $(2,2,1)$ with $f=9$ and $(-1,-1,7)$ with $f=51$. The other case ($p_1^\star=0$) has a negative discriminant and no real solution.
+  \item[Problem 4-24 (differential constraints).] For $J=\int(\lambda+w_3^2)\,dt$ with $\dot w_1=w_2$ and $\dot w_2=w_3$, I wrote the augmented integrand $g_a=\lambda+w_3^2+p_1(\dot w_1-w_2)+p_2(\dot w_2-w_3)$. The three Euler--Lagrange equations give $p_1^\star$ constant, $\dot p_2^\star=-p_1^\star$ and $p_2^\star=2w_3^\star$.
+  \item[Problem 4-25 (isoperimetric constraint).] To minimise $\int_0^1(\dot x^2+t^2)\,dt$ with $x(0)=x(1)=0$ and $\int_0^1 x^2\,dt=2$, I introduced $z$ with $\dot z=x^2$. The Euler--Lagrange equations give $\ddot x=Cx$ with constant $C$. Only $C=-n^2\pi^2$ admits a non-trivial solution satisfying both end conditions, and the integral constraint fixes the amplitude: $x^\star(t)=2\sin(n\pi t)$.
+\end{description}
+\end{document}

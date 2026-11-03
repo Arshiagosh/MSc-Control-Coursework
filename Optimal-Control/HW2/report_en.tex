@@ -1,0 +1,19 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Optimal Control, Homework 2}{Calculus of Variations: Euler--Lagrange Equations and Free End Points}{Spring 1404 (2025)}
+
+\noindent\textit{The original is handwritten (tablet) in Persian. The problems come from Chapter~4 of Kirk, \emph{Optimal Control Theory}.}
+
+\begin{description}
+  \item[Problem 4-4 (first variation).] For $J(x)=\int_{t_0}^{t_f}[x^2-x^2\dot x]\,dt$ I expanded $J(x+\delta x)-J(x)$, dropped the terms of higher order in $\delta x$, and obtained the first variation $\delta J=\int_{t_0}^{t_f}(3x^2\delta x-2x\dot x\,\delta x - x^2\delta\dot x)\,dt$.
+  \item[Problem 4-8 (fixed end points).] I solved the Euler--Lagrange equation $\partial g/\partial x - \tfrac{d}{dt}\partial g/\partial\dot x=0$ for several functionals with both end points fixed:
+    \begin{itemize}
+      \item $\int_0^1(x^2+\dot x^2)\,dt$ with $x(0)=0$, $x(1)=1$ gives $x^\star(t)=(e^t-e^{-t})/(e-e^{-1})$;
+      \item a variant with $x(0)=1$, $x(2)=-3$;
+      \item a two-state problem whose fourth-order characteristic equation $s^4-1=0$ gives exponential and trigonometric modes.
+    \end{itemize}
+  \item[Problem 4-9.] A functional with a forcing term. The particular solution $x_p=A$ plus the homogeneous modes $e^{\pm 2t}$, fitted to $x(0)=1$ and $x(1)=4$.
+  \item[Problem 4-10 (free final state).] The natural boundary condition $\partial g/\partial\dot x\,|_{t_f}=0$ replaces the missing end condition. Example: $\int_0^1(\tfrac12\dot x^2+x\dot x+\dot x+x)\,dt$ with $x(0)=\tfrac12$ gives $x^\star(t)=\tfrac12t^2-\tfrac32t+\tfrac12$.
+  \item[Problems 4-13 and 4-14 (end point on a curve).] For arc-length-type functionals $\int\sqrt{1+\dot x^2}\,dt$ and $\int\sqrt{1+\dot x^2}/x\,dt$ with the final point constrained to a line $\theta(t)$, I used the transversality condition $[\partial g/\partial\dot x\,(\dot\theta-\dot x)+g]_{t_f}=0$. The answers are the straight line $x^\star(t)=\tfrac14t+2$ and the circular arc $x^\star(t)=\sqrt{10-t^2}$.
+\end{description}
+\end{document}

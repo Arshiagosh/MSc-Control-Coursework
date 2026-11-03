@@ -1,0 +1,14 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Optimal Control, Homework 1}{State-space Models, Transition Matrices, Controllability and Observability}{Spring 1404 (2025)}
+
+\noindent\textit{The original is handwritten (tablet) in Persian. The problems come from Chapter~1 of Kirk, \emph{Optimal Control Theory}.}
+
+\begin{description}
+  \item[Problem 1-1 (series RLC circuit).] From KVL and KCL, with $x_1=i_L$ and $x_2=v_C$, I wrote $\dot x = Ax + Be$ with $A=\begin{bmatrix}-R/L & -1/L\\ 1/C & 0\end{bmatrix}$ and $B=[1/L;\ 0]$. For $L=1$, $C=\tfrac12$, $R=3$ I computed $\Phi(s)=(sI-A)^{-1}$ and $\Phi(t)=\mathcal{L}^{-1}\{\Phi(s)\}$, a combination of $e^{-t}$ and $e^{-2t}$. I then found the response to a rectangular input pulse on $1\le t\le 2$ with zero initial conditions, writing $i_L(t)$ and $v_C(t)$ with shifted step functions.
+  \item[Problem 1-11 (properties of the transition matrix).] For time-varying systems I proved $\Phi(t,t)=I$, $\Phi(t_2,t_0)=\Phi(t_2,t_1)\Phi(t_1,t_0)$, $\Phi^{-1}(t_2,t_1)=\Phi(t_1,t_2)$ and $\tfrac{d}{dt}\Phi(t,t_0)=A(t)\Phi(t,t_0)$. I then specialised them to the time-invariant case $\Phi(t-t_0)=e^{A(t-t_0)}$.
+  \item[Problem 1-13 (realisations from transfer functions).] For $5/(s(s+1))$, $1/s^2$ and $5(s+2)/(s(s+1))$ I drew signal-flow graphs, wrote state equations and computed $\Phi(t)$ for each. For example, $1/s^2$ gives $\Phi(t)=\begin{bmatrix}1&t\\0&1\end{bmatrix}$. I also noted which realisations share the same $A$ matrix.
+  \item[Problem 1-14 (controllability and observability).] For several systems I built $E=[B\ AB\ \cdots]$ and $G=[C^T\ A^TC^T\ \cdots]$ and checked their ranks, which classifies each system as controllable or not and observable or not. I also drew the corresponding signal-flow graphs, including a companion-form system with $a_i\neq 0$ that is controllable with $\operatorname{rank}E=4$.
+  \item[Problem 1-15 (diagonal systems).] For $\dot x=\operatorname{diag}(\lambda_1,\dots,\lambda_4)x+bu$ and $y=c^Tx$ with distinct $\lambda_i$, the Vandermonde structure of $E$ and $G$ shows that the system is controllable iff every $b_i\neq 0$ and observable iff every $c_i\neq 0$.
+\end{description}
+\end{document}

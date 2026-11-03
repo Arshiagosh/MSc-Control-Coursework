@@ -1,0 +1,13 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Optimal Control, Homework 7}{Pontryagin's Minimum Principle and Linear Regulators}{Spring 1404 (2025)}
+
+\noindent\textit{The original is handwritten (tablet) in Persian. The problems come from Chapter~5 of Kirk, \emph{Optimal Control Theory}.}
+
+\begin{description}
+  \item[Problem 5-2 (necessary conditions with a bounded input).] For a nonlinear second-order system with $\mathcal{H}=x_1^2+\tfrac12x_2^2+\tfrac12u^2+p_1x_2+p_2[(1-x_1^2)x_2-x_1+u]$, I wrote the costate equations $\dot p^\star=-\partial\mathcal{H}/\partial x$. With an unconstrained input, $\partial\mathcal{H}/\partial u=0$ gives $u^\star=-p_2^\star$. With $|u|\le 1$, $u^\star=-p_2^\star$ inside the bound and saturates at $\mp1$ when $|p_2^\star|>1$.
+  \item[Problem 5-6 (finite-horizon regulator).] For $\dot x=x+u$ and $J=\int_0^T(1.5x^2+0.5u^2)\,dt$, I solved the state--costate system with the transition matrix $\varphi(t)$ and the condition $p^\star(T)=0$. This gives a closed-form time-varying feedback $u^\star(t)=-F(t)x^\star(t)$, which tends to $u^\star=-3x$ as $T\to\infty$.
+  \item[Problem 5-11 (fixed versus free final state).] For $\dot x=-x+u$ and $J=\int_0^1\tfrac12(3x^2+u^2)\,dt$, I derived the optimal feedback for a fixed end state and for a free one. Both are ratios of exponentials in $t_f-t$.
+  \item[Problem 5-14 (infinite-horizon regulator).] For $\dot x=ax+u$ with $J=\int_0^\infty(qx^2+ru^2)\,dt$, the algebraic Riccati equation gives the closed-loop pole $-\sqrt{a^2+q/r}$, stable for either sign of $a$. As $q/r\to\infty$ the pole moves to $-\infty$. For a second-order plant I solved the $2\times2$ Riccati equation. The stabilising root, $K_{12}=4$, $K_{22}=2$, places the closed-loop poles at $-2$ and $-3$.
+\end{description}
+\end{document}
