@@ -1,0 +1,24 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Convex Optimization, Take-home Quiz 3}{Convex and Quasi-convex Functions}{Spring 1404 (2025)}
+
+\noindent\textit{The original is a scanned handwritten answer sheet in Persian (\texttt{report\_fa.pdf}).}
+
+The quiz had nine questions on convex, concave and quasi-convex functions. My answers:
+\begin{enumerate}
+  \item \textbf{Sublevel sets.} A function is quasi-convex exactly when all its sublevel sets are convex; I proved both directions. Example: $f(x)=-x^2$ on $x\ge 0$ is not convex, but its sublevel sets are intervals.
+  \item \textbf{Rank of PSD matrices.} $\operatorname{rank}(X)$ on $\mathbf{S}^n_+$ is not quasi-convex. The counterexample is $X=\operatorname{diag}(1,0)$, $Y=\operatorname{diag}(0,1)$, $\theta=\tfrac12$. It is quasi-concave, which I proved through $\ker(X+Y)=\ker X\cap\ker Y$ for $X,Y\succeq 0$.
+  \item \textbf{A convex function and an inequality.} $x/(1-x)$ is convex on $[0,1)$, since $f''=2/(1-x)^3>0$. Applying Jensen's inequality to it gives $\frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b}\ge\frac32$.
+  \item \textbf{Three functions.}
+    \begin{itemize}
+      \item The logistic function $1/(1+e^{-2x})$ is convex for $x<0$ and concave for $x>0$.
+      \item $n\operatorname{tr}(X)\log\operatorname{tr}(X)-\operatorname{tr}(X)\log\det X$ is convex on $\mathbf{S}^n_{++}$. The proof works with $t=\operatorname{tr}X$ and a perspective.
+      \item $\binom{x}{r}$ is convex on $(r-1,\infty)$. I showed this through $\log\binom{x}{r}=\sum_k \log(x-k)-\log r!$.
+    \end{itemize}
+  \item \textbf{Quasi-concavity on an interval.} A continuous $f$ on $[a,b]$ is quasi-concave if $f(\theta a+(1-\theta)b)\ge\min\{f(a),f(b)\}$.
+  \item \textbf{Separating functions.} A convex $f$ and a concave $g$ with $g\le f$ can be separated by an affine function $h$ with $g\le h\le f$.
+  \item \textbf{Determinant root.} $(\det X)^{1/n}$ is concave on $\mathbf{S}^n_{++}$. I restricted it to a line $Z+tV$, which reduces it to a geometric mean of $1+t\lambda_i$.
+  \item \textbf{A perspective.} $\|x\|_p^p/t^{p-1}$ ($p>1$) is convex as the perspective of the convex function $\|x\|_p^p$.
+  \item \textbf{Square of a function.} $f^2$ is convex when $f$ is convex and non-negative, or concave and non-positive. The proof uses $(f^2)''=2f'^2+2ff''$.
+\end{enumerate}
+\end{document}

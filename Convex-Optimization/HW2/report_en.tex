@@ -1,0 +1,16 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Convex Optimization, Homework 2}{Convex Sets}{Spring 1404 (2025)}
+
+This homework is about recognising and proving convexity of sets. Every answer is a short proof or a counterexample.
+
+\section*{Problems and what I did}
+\begin{enumerate}
+  \item \textbf{Affine sets as solution sets of linear equations.} For an affine set $L = x_0 + V$ with $V$ a linear subspace, I wrote $V$ as the null space of a matrix $P$ ($V=\{v : Pv = 0\}$) and showed that $L = \{x : Px = Px_0\}$. So every affine set is the solution set of a system $Ax=b$ with $A=P$, $b=Px_0$.
+  \item \textbf{Which sets are convex?} A slab, a rectangle and a wedge are convex because each is an intersection of half-spaces. The set of points closer to one point than to a given set was written as an intersection of half-spaces. The set $\{x : x + S_2 \subseteq S_1\}$ is convex as an intersection of the convex sets $S_1 - y$. A counterexample in $\mathbb{R}$ ($S=\{-1,1\}$, $T=\{0\}$) shows that the set of points closer to $S$ than to $T$ need not be convex. The set of points closer to $a$ than to $b$, scaled by $\theta$, is a Euclidean ball.
+  \item \textbf{Expanded and restricted sets.} For a convex $S$, both $S_a = \{x : \operatorname{dist}(x,S) \le a\}$ and $S_{-a}$ (points whose $a$-ball lies in $S$) are convex. Both proofs take two points and check their convex combination.
+  \item \textbf{Sets of probability distributions.} For a discrete random variable with distribution $p$, I checked which constraints on $p$ give convex sets. Bounds on probabilities and expectations, and bounds on $\mathbb{E}f(x)$, are linear in $p$, so they give convex sets. The variance constraint $\operatorname{var}(x) \ge \alpha$ is not convex; I gave a counterexample with $n=2$. Quantile constraints reduce to a single linear inequality in $p$.
+  \item \textbf{Projection onto a compact convex set.} The distance function $y \mapsto \|x-y\|$ is continuous, so it attains a minimum on a compact set $C$. If two points attained it, their midpoint would also be in $C$ (by convexity), and the triangle inequality forces the two points to coincide. So the closest point is unique.
+  \item \textbf{The $\ell_\infty$ ball as a polyhedron.} I described the unit $\ell_\infty$ ball by $2n$ linear inequalities $\pm e_i^T x \le 1$, and as the convex hull of the $2^n$ vectors with entries $\pm 1$.
+\end{enumerate}
+\end{document}

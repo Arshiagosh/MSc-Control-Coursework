@@ -1,0 +1,18 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Convex Optimization, Homework 4}{LP, SDP and Quasi-convex Reformulations}{Spring 1404 (2025)}
+
+\section*{Problems and what I did}
+\begin{enumerate}
+  \item \textbf{Norm problems as LPs.} I rewrote $\max\|Ax-b\|_1$ s.t.\ $\|x\|_\infty\le 1$ (and the swapped version) as LPs. The vector $u\ge|Ax-b|$ and the scalar $t\ge|x_j|$ make every constraint linear, and at the optimum $t=\|x\|_\infty$ and $u=|Ax-b|$.
+  \item \textbf{Matrix-fractional problems as SDPs.} With an epigraph variable $t$ and the Schur complement, constraints of the form $c^TF(x)^{-1}c\le t$ (with $F(x)\succ 0$) become LMIs in $(x,t)$. A second variant was handled through duality and a slack variable.
+  \item \textbf{Quasi-convex problems.} A ratio of a convex numerator to a concave positive denominator is quasi-convex. I wrote the epigraph form and noted that it can be solved by bisection. A variant with a squared $\ell_1$ term can be written as a QCQP or an SOCP.
+  \item \textbf{Lamp illumination.} Total illumination is a pointwise maximum of affine functions, so it is convex. The set where at least half the patches are dark is a superlevel set of a concave function, so it is convex. The number of lit patches is a sum of step functions, so it is not convex.
+  \item \textbf{A trace minimisation.} With $A\succ 0$ the constraint is equivalent through the Schur complement to a PSD condition, and the matrix minimising $\operatorname{tr}X$ is the smallest one in the PSD order. A related piecewise-linear objective was rewritten as an LP with auxiliary variables $v,w$.
+  \item \textbf{Separating two point clouds by an LP (\texttt{Q8.py}).} The constraints are $w^Ta_i+b\ge 1$ and $w^Tb_j+b\le-1$, and the objective is $\min\|w\|_1$. I generated the two clouds myself (20 Gaussian points around $(2,2)$ and 20 around $(-2,-2)$), solved the LP with CVXPY and plotted the separating line.
+  \item \textbf{Distance between two polytopes (\texttt{Q9.py}).} A QP: $\min\|x-y\|_2^2$ s.t.\ $A_1x\le b_1$, $A_2y\le b_2$, tested on a unit square and a shifted square.
+  \item \textbf{Optimal set point of a CSTR (\texttt{Q10.m}).} The steady state satisfies $(I-A)x=Bu$, with bounds $|u|\le 15$, $|x_1|\le 0.5$, $|x_2|\le 5$. The cost is piecewise quadratic in $x_2$ over three regions. I modelled the regions with binary variables and big-$M$ constraints, and solved the mixed-integer QP with YALMIP's branch-and-bound. Re-running the script with YALMIP gives $x_1=-0.0358$, $x_2=2.0011$, $u=-2.6116$, cost $-0.0358$: the optimum sits at the edge of the zero-cost region $|x_2|\le 2$.
+\end{enumerate}
+
+\textit{Note:} \texttt{Q8.py} and \texttt{Q9.py} need CVXPY, which could not be installed on the machine used to prepare this repository, so they were not re-run here.
+\end{document}

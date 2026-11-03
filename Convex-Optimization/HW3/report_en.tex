@@ -1,0 +1,37 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Convex Optimization, Homework 3}{Convex and Quasi-convex Functions}{Spring 1404 (2025)}
+
+This homework is about deciding whether functions are convex, concave or quasi-convex, using second-order conditions and the composition rules.
+
+\section*{Problems and what I did}
+\begin{enumerate}
+  \item \textbf{Running average of a function.} I showed by differentiation that $g(x)=\tfrac{1}{x}\int_0^x f(t)\,dt$ inherits monotonicity and concavity from $f$.
+  \item \textbf{Epigraphs.} I matched the epigraph types to the functions: a half-space comes from an affine function, a convex cone from a positively homogeneous function, and a polyhedron from a piecewise-linear function.
+  \item \textbf{Hessian tests.} For each function I computed the Hessian. When it was indefinite, I checked the sub- and superlevel sets instead: some functions are quasi-concave only, some quasi-linear (both quasi-convex and quasi-concave), and some convex and concave as well as quasi-convex.
+  \item \textbf{A function of several variables.} I computed the Hessian entries for $i\neq j$ and $i=j$, and used an inequality between two auxiliary vectors $a$ and $b$ to show that the function is concave.
+  \item \textbf{Composition rules.} I used them for
+    \begin{itemize}
+      \item the sum of the $k$ largest residuals of $Ax-b$, a pointwise maximum of convex functions;
+      \item $-\log(-g(x))$ for convex $g<0$, where $-\log$ is convex and decreasing;
+      \item $y^Ty/t$ composed with an affine map, a perspective of a quadratic;
+      \item a $\log$ of a sum of exponentials, through Jensen's inequality.
+    \end{itemize}
+  \item \textbf{Products and ratios.} Using Jensen's inequality, I showed that the product of two non-negative convex functions that are both non-decreasing (or both non-increasing) is convex, derived the matching results for concave functions, and handled $f/g$ through $1/g$.
+  \item \textbf{More compositions.}
+    \begin{itemize}
+      \item $\|Ax-b\|$ is convex as a norm of an affine map.
+      \item $\|Ax+b\|/(c^Tx+d)$ is convex on $c^Tx+d>0$ as the perspective of a norm.
+      \item $\max\{1,x,x^2\}$ is convex as a pointwise maximum.
+      \item A function whose second derivative changes sign at $x=-2$ is convex for $x>-2$ and concave for $x<-2$.
+    \end{itemize}
+  \item \textbf{Perspective-based functions.}
+    \begin{itemize}
+      \item $t - \tfrac{1}{t}x^Tx$ is concave.
+      \item $-\log(t - x^Tx/t)$ is convex.
+      \item A sum of two negated logarithms of concave functions is convex.
+    \end{itemize}
+  \item \textbf{Linear-fractional functions.} I showed that $u(x)/v(x)$ with affine $u$ and positive affine $v$ is quasi-convex, since each sublevel set is a half-space. Whether it is actually convex depends on the sign of a remaining term.
+  \item \textbf{A three-variable function.} $(x-z)^2/(y+1) + \max\{1+2x-y,\ 1/z,\ x^2\}$ is convex on $y>-1$, $z>0$. The first term is a quadratic-over-linear, and the second is a pointwise maximum of convex functions.
+\end{enumerate}
+\end{document}

@@ -1,0 +1,18 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Convex Optimization, Homework 5}{LMIs in Control: Riccati, Dissipativity and $\mathcal{H}_\infty$}{Spring 1404 (2025)}
+
+\section*{Problems and what I did}
+\begin{enumerate}
+  \item \textbf{Riccati inequality as an LMI.} I wrote the Riccati inequality $A^TPA+Q-A^TPB(R+B^TPB)^{-1}B^TPA \succeq P$ as a single LMI using the Schur complement.
+  \item \textbf{Dissipativity of a loop with $P(s)=1/(-3s+1)$.} Closed-loop stability needs $k<-1$. Dissipativity with supply rate $s(w,z)=wz$ holds for $k\ge 0$ or $k\le -1$. Together the condition is $k\le-1$.
+  \item \textbf{An RLC circuit.} With states $x_1=v_C$ and $x_2=i$, the storage function is the stored energy, and its derivative is the supplied power minus $Ri^2\le 0$. So the circuit is always dissipative. For the second configuration I derived the condition as negative semidefiniteness of a $2\times2$ matrix in $R$, $L$ and $C$.
+  \item \textbf{A second dissipativity check.} I verified the dissipation inequality for both the supply-rate and the storage-function forms.
+  \item \textbf{Fastest decay rate.} $\dot V \le -2\beta V$ with $V=x^TPx$ leads to the generalised eigenvalue problem $\min(-\beta)$ s.t.\ $A^TP+PA+2\beta P\preceq 0$, $P\succ 0$.
+  \item \textbf{LQR-type design as an SDP (\texttt{Q6.m}).} I multiplied by $Y=P^{-1}$, set $L=KY$ and applied the Schur complement, which gives an LMI with objective $\operatorname{tr}Y$, solved for an uncertain parameter $|\alpha|\le 0.1$. My report gives $K\approx[1.2\ \ 3.2\ \ 4.1]$. Re-running the script with the current YALMIP gives $K=[1.2157\ \ 3.2718\ \ 4.1376]$. Because $\alpha Y$ is bilinear, YALMIP hands the problem to \texttt{fmincon}, which stops with a feasibility warning.
+  \item \textbf{Passivity and bounded-real LMIs.} I wrote the LMI conditions for passivity and for an $\mathcal{H}_\infty$-norm bound.
+  \item \textbf{State-feedback $\mathcal{H}_\infty$ design (\texttt{Q8.m}, \texttt{Q9.m}).} I applied the bounded-real lemma with $X=P^{-1}$, $Y=KX$ and minimised $\gamma$ with \texttt{lmilab}. The report gives the resulting gain for Q8, and for Q9 concludes that all eigenvalues of $P$ are positive, so the closed loop is stable.
+\end{enumerate}
+
+\textit{Status of the code:} \texttt{Q6.m} runs. \texttt{Q8.m} has a missing closing parenthesis on its last line (\texttt{disp(value(Y*pinv(X)));}). \texttt{Q9.m} uses strict inequalities (\texttt{<}, \texttt{>}), which current YALMIP versions reject. Both were left as submitted.
+\end{document}

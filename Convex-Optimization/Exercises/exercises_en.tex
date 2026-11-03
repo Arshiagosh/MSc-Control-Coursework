@@ -1,0 +1,14 @@
+\input{../../tex/preamble}
+\begin{document}
+\summaryheader{Convex Optimization, Class and Online Exercises}{Short Proofs on Convex Sets}{Spring 1404 (2025)}
+
+\noindent\textit{The originals are handwritten tablet notes in Persian (\texttt{ExClass1--3.pdf}, \texttt{ExOnline1--2.pdf}).}
+
+\begin{description}
+  \item[Class exercise 1.] Every affine set can be written as the solution set of a linear system. With $L = x_0 + V$ and $V = \{v : Pv = 0\}$, every $x\in L$ satisfies $Px = Px_0$, and the converse also holds.
+  \item[Class exercise 2.] I related the two descriptions of an ellipsoid, $\{x : (x-x_c)^T P^{-1}(x-x_c)\le 1\}$ and $\{x_c + Au : \|u\|_2\le 1\}$. Substituting the second form into the first gives $A^TP^{-1}A = I$, which holds for $A = P^{1/2}$.
+  \item[Class exercise 3.] The perspective function $P(x,t)=x/t$ maps convex sets to convex sets: the image of a segment is again a segment, with a reparametrised $\theta$. The inverse image of a convex set under the perspective is also convex.
+  \item[Online exercise 1.] A proof by contradiction. If $C$ were not convex, some convex combination $x_3$ of two of its points would lie outside $C$, which contradicts the given property.
+  \item[Online exercise 2.] The Euclidean ball $\{x : \|x - x_c\|_2 \le r\}$ is convex. The proof is one application of the triangle inequality to $\|\theta x_1 + (1-\theta)x_2 - x_c\|_2$.
+\end{description}
+\end{document}
