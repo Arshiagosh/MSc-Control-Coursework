@@ -5,4 +5,3 @@ Short summaries of course notes on design objectives (command following, disturb
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian

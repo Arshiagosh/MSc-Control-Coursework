@@ -7,7 +7,6 @@ Kirk examples 5.2-1 and 5.2-2: the Riccati differential equation is integrated b
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian
 - `Q5_2_1.slx`
 - `Q5_2_2.slx`
 - `Q5_2_2_Gains.m`

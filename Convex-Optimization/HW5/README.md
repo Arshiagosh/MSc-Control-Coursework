@@ -5,7 +5,6 @@ The Riccati inequality as an LMI, dissipativity and passivity checks for simple 
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian
 - `Q6.m`
 - `Q8.m`
 - `Q9.m`

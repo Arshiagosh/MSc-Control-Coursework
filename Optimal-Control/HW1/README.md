@@ -5,4 +5,3 @@ Kirk, Chapter 1: modelling an RLC circuit, computing state-transition matrices, 
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian

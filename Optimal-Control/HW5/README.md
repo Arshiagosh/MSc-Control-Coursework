@@ -7,7 +7,6 @@ Kirk examples 5.2-3 and 5.2-4: the Riccati equation plus a feed-forward equation
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian
 - `Q5_2_3.slx`
 - `Q5_2_3_Gains.m`
 - `Q5_2_4.slx`

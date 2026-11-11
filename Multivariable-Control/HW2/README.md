@@ -7,7 +7,6 @@ Transfer function versus state space, RGA pairing, a survey of MIMO design metho
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian
 - `Q1.slx`
 - `Q2.slx`
 - `Q2Code.m`

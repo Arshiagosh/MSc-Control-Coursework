@@ -2,7 +2,7 @@
 \begin{document}
 \summaryheader{Optimal Control, Homework 1}{State-space Models, Transition Matrices, Controllability and Observability}{Spring 1404 (2025)}
 
-\noindent\textit{The original is handwritten (tablet) in Persian. The problems come from Chapter~1 of Kirk, \emph{Optimal Control Theory}.}
+\noindent\textit{The problems come from Chapter~1 of Kirk, \emph{Optimal Control Theory}.}
 
 \begin{description}
   \item[Problem 1-1 (series RLC circuit).] From KVL and KCL, with $x_1=i_L$ and $x_2=v_C$, I wrote $\dot x = Ax + Be$ with $A=\begin{bmatrix}-R/L & -1/L\\ 1/C & 0\end{bmatrix}$ and $B=[1/L;\ 0]$. For $L=1$, $C=\tfrac12$, $R=3$ I computed $\Phi(s)=(sI-A)^{-1}$ and $\Phi(t)=\mathcal{L}^{-1}\{\Phi(s)\}$, a combination of $e^{-t}$ and $e^{-2t}$. I then found the response to a rectangular input pulse on $1\le t\le 2$ with zero initial conditions, writing $i_L(t)$ and $v_C(t)$ with shifted step functions.

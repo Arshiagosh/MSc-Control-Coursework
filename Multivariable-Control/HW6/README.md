@@ -5,4 +5,3 @@ Near pole-zero cancellation, controllability and observability indices, function
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian

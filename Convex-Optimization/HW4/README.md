@@ -5,7 +5,6 @@ Rewriting norm problems as LPs, matrix-fractional constraints as LMIs, and ratio
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian
 - `Q10.m`
 - `Q8.py`
 - `Q9.py`

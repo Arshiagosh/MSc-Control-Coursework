@@ -5,4 +5,3 @@ Proofs and counterexamples: affine sets as solution sets of linear equations, co
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian

@@ -5,4 +5,3 @@ Kirk, Chapter 5: necessary conditions with a bounded input, finite- and infinite
 ## Files
 
 - [`report_en.pdf`](report_en.pdf): English summary (LaTeX source next to it)
-- [`report_fa.pdf`](report_fa.pdf): my original report in Persian
